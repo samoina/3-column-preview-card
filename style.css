@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+	/* Primary */
+	--bright-orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--very-dark-cyan: hsl(179, 100%, 13%);
+
+	/* Neutral */
+	--transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+	/* background-headings,buttons */
+	--very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-size: 15px;
+	line-height: 1.5;
+	color: white;
+	text-align: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+img,
+picture {
+	display: block;
+	max-width: 100%;
+}
+
+button {
+	font: inherit;
+	padding: 1rem;
+	border: none;
+	border-radius: 3rem;
+	background-color: var(--very-light-gray);
+}
+
+button:hover {
+	border: 2px solid white;
+	cursor: pointer;
+	color: var(--very-light-gray);
+}
+
+.main {
+	max-width: 23rem;
+	margin: 4rem 0;
+	font-family: 'Lexend Deca', sans-serif;
+	font-weight: 400;
+}
+
+.main__heading--sr {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+.main p {
+	color: var(--transparent-white-paragraphs);
+	margin-bottom: 1rem;
+}
+
+.main h2 {
+	font-family: 'Big Shoulders Display', cursive;
+	font-weight: 700;
+	margin: 1rem 0;
+}
+
+section {
+	padding: 2rem;
+}
+
+.main__sedans {
+	background-color: var(--bright-orange);
+	border-radius: 10px 10px 0 0;
+}
+
+.button__sedans {
+	color: var(--bright-orange);
+}
+
+.button__sedans:hover {
+	background-color: var(--bright-orange);
+}
+
+.main__suvs {
+	background-color: var(--dark-cyan);
+}
+
+.button__suvs {
+	color: var(--dark-cyan);
+}
+
+.button__suvs:hover {
+	background-color: var(--dark-cyan);
+}
+
+.main__luxury {
+	background-color: var(--very-dark-cyan);
+	border-radius: 0 0 10px 10px;
+}
+
+.button__luxury {
+	color: var(--very-dark-cyan);
+}
+
+.button__luxury:hover {
+	background-color: var(--very-dark-cyan);
+}
+
+/* media Queries - Mobile: 375px- Desktop: 1440px */
+@media screen and (min-width: 60rem) {
+	body {
+		background-color: red;
+	}
+
+	.main {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
